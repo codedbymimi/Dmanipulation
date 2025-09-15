@@ -4,38 +4,38 @@
 //DOM Manipulation refers to the process of using JavaScript to interact with and modify the elements, attributes, and content of a web page in real-time.
 //This allows developers to create dynamic and interactive web applications by changing the appearance and behavior of web pages based on user interactions or other events.    
 
-const text = document.getElementById("change");
-const btn = document.getElementById("btn");
-const car = document.getElementById("car");
-const btn2 = document.getElementById("btn2");
+// const text = document.getElementById("change");
+// const btn = document.getElementById("btn");
+// const car = document.getElementById("car");
+// const btn2 = document.getElementById("btn2");
 
-btn.addEventListener("click", function() {
-    car.src = "car.jpg";
-});
+// btn.addEventListener("click", function() {
+//     car.src = "car.jpg";
+// });
 
-btn2.addEventListener("click", function() {
-    car.remove();
-});
+// btn2.addEventListener("click", function() {
+//     car.remove();
+// });
 
-const newElement = document.createElement("h2");
-newElement.innerHTML = "This is a new element created using JavaScript";
-document.body.appendChild(newElement);      
+// const newElement = document.createElement("h2");
+// newElement.innerHTML = "This is a new element created using JavaScript";
+// document.body.appendChild(newElement);      
 
-const newimg = document.createElement("img");
-newimg.src = "car.jpg";
-newimg.style.width = "50%";
-document.body.appendChild(newimg);  
+// const newimg = document.createElement("img");
+// newimg.src = "car.jpg";
+// newimg.style.width = "50%";
+// document.body.appendChild(newimg);  
 
-const eventbtn = document.getElementById("eventbtn");
-eventbtn.addEventListener("click", function() {
-    alert("You clicked the button");  
-});
+// const eventbtn = document.getElementById("eventbtn");
+// eventbtn.addEventListener("click", function() {
+//     alert("You clicked the button");  
+// });
 
-const box = document.getElementById("box");
-const close = document.getElementById("close"); 
-close.addEventListener("click", function() {
-    box.style.display = "none"; 
-});
+// const box = document.getElementById("box");
+// const close = document.getElementById("close"); 
+// close.addEventListener("click", function() {
+//     box.style.display = "none"; 
+// });
 
 
 // btn.addEventListener("click", function() {   
@@ -59,3 +59,31 @@ close.addEventListener("click", function() {
 // btn.addEventListener("click", function() {
 //     btn.style.backgroundColor = "green";      
 // });
+
+
+//Create a toast modal that responds to a click event, and set an interval that lets it disappear after 3 seconds
+
+const toast = document.getElementById("toast");
+const showtoastbtn = document.getElementById("showtoastbtn");   
+
+showtoastbtn.addEventListener("click", function() {
+    toast.style.display = "block";  
+    toast.style.backgroundColor = "goldenrod ";
+    toast.style.color = "white";
+    toast.style.padding = "10px";
+    toast.style.borderRadius = "10px";
+    toast.style.margin = "20px";
+    toast.style.fontSize = "40px";
+    toast.style.width  = "50%"; 
+    toast.style.textAlign = "center";
+    toast.style.height = "50px";  
+    setTimeout(function() {
+        toast.style.display = "none";      
+    }, 3000);
+});
+
+showtoastbtn.addEventListener("mouseover", function() {
+    showtoastbtn.style.backgroundColor = "maroon"; 
+    showtoastbtn.style.fontSize = "20px";
+    showtoastbtn.style.color = "white";
+});
